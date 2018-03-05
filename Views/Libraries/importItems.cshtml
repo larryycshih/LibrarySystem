@@ -1,0 +1,20 @@
+﻿@model LibrarySystem.Models.Library
+
+@{
+    ViewBag.Title = "importItems";
+}
+
+<h2>importItems</h2>
+
+@using (Html.BeginForm("importItems", "Libraries", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <span>Select File:</span>
+            <input type="file" name="postedFile" />
+            <hr />
+            <input type="submit" value="Upload" />
+            <br />
+            <span style="color:green">@ViewBag.Message</span>
+}
+
+@ViewBag.Result
+

@@ -1,0 +1,93 @@
+﻿@model IEnumerable<LibrarySystem.Models.Library>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.MediaType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaLanguage)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MediaCategory)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ReferenceID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publisher)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.DatePurchased)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ISBN_ISSN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.MediaType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaLanguage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MediaCategory)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.ReferenceID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Author)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publisher)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.DatePurchased)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.ISBN_ISSN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
